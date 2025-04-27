@@ -1,0 +1,205 @@
+:root {
+    --cor-fundo-claro:rgb(247, 147, 181);
+    --cor-texto-claro: #fff; /* Texto branco */
+    --cor-destaque-claro:rgb(252, 237, 110);
+
+    --cor-fundo-escuro: #333;
+    --cor-texto-escuro: #fff; /* Texto branco */
+    --cor-destaque-escuro:rgb(252, 198, 206);
+
+    --transicao: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-claro);
+    color: white; /* Texto branco */
+    transition: background-color var(--transicao), color var(--transicao);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: white; /* Título em branco */
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: var(--cor-destaque-claro);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Link em branco */
+    font-weight: bold;
+    transition: color var(--transicao);
+}
+
+nav a:hover {
+    color: #ff69b4;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.botao {
+    background-color: var(--cor-destaque-claro);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: white; /* Botões em branco */
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform var(--transicao), background-color var(--transicao);
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.botao:hover {
+    transform: scale(1.1);
+    background-color: var(--cor-fundo-claro);
+}
+
+#btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--cor-destaque-claro);
+    color: white; /* Botão "Voltar ao topo" em branco */
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, background-color var(--transicao);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+#btn-topo.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#btn-topo:hover {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* Tema escuro */
+.dark-theme {
+    background-color: var(--cor-fundo-escuro);
+    color: white; /* Texto branco no tema escuro */
+}
+
+.dark-theme header {
+    background-color: var(--cor-destaque-escuro);
+}
+
+.dark-theme nav {
+    background-color: var(--cor-destaque-escuro);
+}
+
+.dark-theme nav a {
+    color: white; /* Links brancos no modo escuro */
+}
+
+.dark-theme nav a:hover {
+    color: #ffb6c1;
+}
+
+.dark-theme .botao {
+    background-color: var(--cor-destaque-escuro);
+    color: white; /* Botões brancos no modo escuro */
+}
+
+.dark-theme .botao:hover {
+    background-color: var(--cor-fundo-escuro);
+}
+
+.dark-theme .foto-perfil {
+    border-color: var(--cor-texto-escuro);
+}
+
+.dark-theme #btn-topo {
+    background-color: var(--cor-destaque-escuro);
+    color: white; /* Botão "Voltar ao topo" branco no modo escuro */
+}
+
+.dark-theme #btn-topo:hover {
+    background-color: var(--cor-fundo-escuro);
+}
+
+#projetos {
+    padding: 2rem;
+    background-color: var(--cor-fundo-claro);
+    text-align: center;
+}
+
+#projetos h2 {
+    font-size: 2rem;
+    color: white; /* Título de projetos em branco */
+    margin-bottom: 1.5rem;
+}
+
+#projetos p {
+    font-size: 1.2rem;
+    color: white; /* Texto "Em breve" em branco */
+    margin-bottom: 1.5rem;
+}
+
+.imagem-projeto {
+    max-width: 30%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    border: 5px solid #ff69b4; /* Borda rosa bebê */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 150px;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.linha-separadora {
+    border: none;
+    height: 2px; /* Ajuste a espessura da linha */
+    background-color: #ff69b4; /* Cor da linha (rosa bebê) */
+    margin: 2rem 0; /* Espaçamento acima e abaixo da linha */
+}
+
+#contato h3 {
+    font-size: 1.5rem;  /* Tamanho da fonte */
+    color:rgb(247, 11, 129);     /* Cor rosa bebê */
+    margin-top: 1rem;   /* Espaço acima do subtítulo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);  /* Sombra leve para dar destaque */
+}
